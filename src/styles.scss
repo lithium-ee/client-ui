@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+$bg: #03151e;
+$primary: #33a7c3;
+$secondary: #ffb703;
+$accent: #fb8500;
+$text: #f3eded;
+$error: #da5869;
+
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $bg;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+* {
+    font-weight: 400;
+    box-sizing: border-box;
+}

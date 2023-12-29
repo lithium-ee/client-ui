@@ -1,0 +1,41 @@
+<div id="container">
+    <nav>
+        <h1>Lithium</h1>
+    </nav>
+    <div id="contents">
+        <form action="" (submit)="submit()">
+            <div id="search-container">
+                <input
+                    id="search"
+                    name="song-name"
+                    type="text"
+                    [formControl]="query"
+                    placeholder="search song" />
+                <div *ngIf="cooldown">
+                    You can add a new song in {{ cooldown }}.
+                </div>
+
+                <div id="search-results">
+                    <div
+                        class="result"
+                        *ngFor="let song of songs"
+                        (click)="selectSong(song)"
+                        [class.selected]="song === selectedSong">
+                        <img src="{{ song.image }}" alt="" />
+                        <div>
+                            <p>{{ song.name }} by&nbsp;</p>
+                            <p class="artists">{{ song.artists }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input
+                id="submit"
+                type="submit"
+                value="add song"
+                [@jumpUp]="selectedSong ? 'visible' : 'hidden'" />
+        </form>
+        {{ error }}
+    </div>
+</div>
