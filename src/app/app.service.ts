@@ -63,8 +63,6 @@ export class AppService {
     }
 
     public getCooldown(): Observable<number> {
-        console.log(this.events);
-
         return this.http.get<number>(
             `${environment.apiUrl}/end-user/cooldown`,
             {

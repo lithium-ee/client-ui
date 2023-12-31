@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
     isFirstVisit = true; // Add this line
 
     ngOnInit() {
-        console.log('here');
         this.router.events.subscribe(event => {
             if (event instanceof NavigationStart) {
                 if (event.url.startsWith('/init') && !this.isFirstVisit) {

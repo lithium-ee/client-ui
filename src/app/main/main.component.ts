@@ -74,7 +74,7 @@ export class MainComponent implements OnInit {
                     this.songs = data;
                 },
                 error: (error: any) => {
-                    this.error = 'asd';
+                    this.error = error;
                 },
             });
     }
@@ -101,6 +101,7 @@ export class MainComponent implements OnInit {
         if (!this.selectedSong) {
             return;
         }
+
         this.appService.submitSong(this.selectedSong).subscribe({
             next: (data: any) => {
                 if (!data) {
