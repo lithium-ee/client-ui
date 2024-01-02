@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../environment'; // Import environment.ts
+import { environment } from '../env/environment'; // Import environment.ts
 import { NavigationStart, Router } from '@angular/router';
 
 @Component({

@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../../environment';
+import { environment } from '../../env/environment';
 import { AppService } from '../app.service';
 import { Song } from './interfaces/song.interface';
 import { FormControl } from '@angular/forms';
