@@ -38,6 +38,7 @@ export class FirstLandComponent {
                     this.goToMain();
                 },
                 error: (error: any) => {
+                    console.log(error);
                     this.goToMain();
                 },
             });
