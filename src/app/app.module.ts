@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 import { FirstLandComponent } from './first-land/first-land.component';
 import { MainComponent } from './main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
 
 @NgModule({
     declarations: [AppComponent, FirstLandComponent, MainComponent],
@@ -20,9 +18,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
         HttpClientModule,
         FormsModule,
         BrowserAnimationsModule,
-    ],
-    providers: [
-              { provide: LocationStrategy, useClass: HashLocationStrategy },
     ],
     bootstrap: [AppComponent],
 })
